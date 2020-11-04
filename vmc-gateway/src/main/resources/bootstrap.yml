@@ -1,0 +1,22 @@
+spring:
+  applications:
+    name: vmc-gateway
+  cloud:
+    config:
+      uri: http://localhost:8080
+      fail-fast: true
+      username: vmc
+      pasword: vmc123
+
+
+zuul:
+  routes:
+    vehicle:
+      url: http://localhost:8080/vmc/vehicle
+      path: /vmc/vehicle/**
+    customer:
+      url: http://localhost:8080/vmc/customer
+      path: /vmc/customer/**
+    vehicleStatus:
+      url: http://localhost:8080/vmc/vehiclestatus
+      path: /vmc/vehiclestatus/**
