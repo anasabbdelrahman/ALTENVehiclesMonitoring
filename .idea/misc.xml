@@ -5,10 +5,24 @@
     <option name="originalFiles">
       <list>
         <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/vmc-config/pom.xml" />
+        <option value="$PROJECT_DIR$/vmc-gateway2/pom.xml" />
+        <option value="$PROJECT_DIR$/vmc-gateway/pom.xml" />
+        <option value="$PROJECT_DIR$/vmc-registery/pom.xml" />
+        <option value="$PROJECT_DIR$/vmc-customer/pom.xml" />
+        <option value="$PROJECT_DIR$/vmc-monitoring/pom.xml" />
+        <option value="$PROJECT_DIR$/vmc-simulator/pom.xml" />
+        <option value="$PROJECT_DIR$/vmc-status/pom.xml" />
+        <option value="$PROJECT_DIR$/vmc-vehicle/pom.xml" />
       </list>
     </option>
+    <option name="ignoredFiles">
+      <set>
+        <option value="$PROJECT_DIR$/vmc-config/vmc-registery/pom.xml" />
+      </set>
+    </option>
   </component>
-  <component name="ProjectRootManager" version="2" languageLevel="JDK_1_8" project-jdk-name="1.8" project-jdk-type="JavaSDK">
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_1_8" default="false" project-jdk-name="1.8" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/out" />
   </component>
 </project>

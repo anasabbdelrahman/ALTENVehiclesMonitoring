@@ -1,5 +1,5 @@
 spring:
-  applications:
+  application:
     name: vmc-gateway
   cloud:
     config:

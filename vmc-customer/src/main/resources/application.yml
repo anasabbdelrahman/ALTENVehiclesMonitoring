@@ -1,0 +1,13 @@
+server:
+  port: 8051
+
+eureka:
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+
+spring:
+  data:
+    mongodb:
+      uri: mongodb+srv://awsuser:awsuser@cluster0-puwdd.mongodb.net/test?ssl=true&serverSelectionTimeoutMS=20000&connectTimeoutMS=20000&authSource=admin&retryWrites=true&maxIdleTimeMS=5000
+      database: VMC

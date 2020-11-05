@@ -6,13 +6,31 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="vmc-status" />
+        <module name="vmc-vehicle" />
         <module name="vmc-gateway" />
+        <module name="vmc-monitoring" />
+        <module name="vmc-registery" />
+        <module name="vmc-config" />
+        <module name="vmc-simulator" />
+        <module name="vmc-customer" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="ALTENVehiclesMonitoring" target="1.8" />
+      <module name="vmc-gateway2" target="1.8" />
+    </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="vmc-config" options="-parameters" />
+      <module name="vmc-customer" options="-parameters" />
       <module name="vmc-gateway" options="-parameters" />
+      <module name="vmc-gateway2" options="-parameters" />
+      <module name="vmc-monitoring" options="-parameters" />
+      <module name="vmc-registery" options="-parameters" />
+      <module name="vmc-status" options="-parameters" />
+      <module name="vmc-vehicle" options="-parameters" />
     </option>
   </component>
 </project>
