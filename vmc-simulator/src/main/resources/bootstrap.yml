@@ -1,6 +1,6 @@
 spring:
   application:
-    name: vmc-vehicle-simulator
+    name: vmc-simulator
   cloud:
     config:
       uri: http://localhost:8888

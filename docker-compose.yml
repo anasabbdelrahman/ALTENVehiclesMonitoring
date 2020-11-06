@@ -90,18 +90,18 @@ services:
     networks:
       - vmc_app_net
 
-#  simulator-service:
-#    build: ./vmc-simulator
-#    image: anasabdelrahman/vmc-simulator
-#    ports:
-#      - '8053:8053'
-#    depends_on:
-#      - config-service
-#      - registry-service
-#      - vehicle-service
-#      - customer-service
-#    networks:
-#      - vmc_app_net
+  simulator-service:
+    build: ./vmc-simulator
+    image: anasabdelrahman/vmc-simulator
+    ports:
+      - '8053:8053'
+    depends_on:
+      - config-service
+      - registry-service
+      - vehicle-service
+      - customer-service
+    networks:
+      - vmc_app_net
 
 networks:
   vmc_app_net:
