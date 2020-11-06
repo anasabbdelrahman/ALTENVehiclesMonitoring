@@ -18,6 +18,10 @@
 
     <groupId>com.alten.vmc</groupId>
     <artifactId>vmc-customer</artifactId>
+    <version>0.0.1-SNAPSHOT</version>
+    <name>vmc-customer</name>
+    <description>customer service for vmc</description>
+
     <dependencies>
         <dependency>
             <groupId>org.springframework.cloud</groupId>

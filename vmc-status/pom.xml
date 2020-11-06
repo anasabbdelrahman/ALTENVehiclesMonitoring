@@ -19,6 +19,9 @@
 
     <groupId>com.alten.vmc</groupId>
     <artifactId>vmc-status</artifactId>
+    <version>0.0.1-SNAPSHOT</version>
+    <name>vmc-status</name>
+    <description>status service for vmc</description>
 
     <dependencies>
         <dependency>

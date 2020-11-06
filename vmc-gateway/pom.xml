@@ -18,6 +18,10 @@
 
     <groupId>com.alten.vmc</groupId>
     <artifactId>vmc-gateway</artifactId>
+    <version>0.0.1-SNAPSHOT</version>
+    <name>vmc-gateway</name>
+    <description>gateway service for vmc</description>
+
     <dependencies>
         <dependency>
             <groupId>org.springframework.boot</groupId>

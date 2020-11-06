@@ -18,6 +18,9 @@
 
     <groupId>com.alten.vmc</groupId>
     <artifactId>vmc-monitoring</artifactId>
+    <version>0.0.1-SNAPSHOT</version>
+    <name>vmc-monitoring</name>
+    <description>monitoring service for vmc</description>
 
     <dependencies>
         <dependency>

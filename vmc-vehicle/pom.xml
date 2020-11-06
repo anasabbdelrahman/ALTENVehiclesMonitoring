@@ -18,6 +18,9 @@
 
     <groupId>com.alten.vmc</groupId>
     <artifactId>vmc-vehicle</artifactId>
+    <version>0.0.1-SNAPSHOT</version>
+    <name>vmc-vehicle</name>
+    <description>vehicle service for vmc</description>
 
     <dependencies>
         <dependency>

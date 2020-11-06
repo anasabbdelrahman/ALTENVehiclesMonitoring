@@ -18,7 +18,9 @@
 
     <groupId>com.alten.vmc</groupId>
     <artifactId>vmc-simulator</artifactId>
-
+    <version>0.0.1-SNAPSHOT</version>
+    <name>vmc-simulator</name>
+    <description>simulator service for vmc</description>
 
     <dependencies>
 

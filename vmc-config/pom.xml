@@ -18,6 +18,9 @@
 
     <groupId>com.alten.vmc</groupId>
     <artifactId>vmc-config</artifactId>
+    <version>0.0.1-SNAPSHOT</version>
+    <name>vmc-config</name>
+    <description>config service for vmc</description>
 
     <dependencies>
         <dependency>
