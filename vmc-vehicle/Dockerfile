@@ -1,4 +1,4 @@
-FROM openjdk:8
+FROM openjdk:8-alpine
 
 # This command required for starting application up.
 RUN apk update && apk add bash
