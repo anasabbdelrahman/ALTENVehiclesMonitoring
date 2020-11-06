@@ -1,0 +1,8 @@
+com/alten/vmc/model/Customer$CustomerBuilder.class
+com/alten/vmc/service/CustomerService.class
+com/alten/vmc/VmcCustomerApplication.class
+com/alten/vmc/swagger/SwaggerConfig.class
+com/alten/vmc/model/Customer.class
+com/alten/vmc/controller/CustomerController.class
+com/alten/vmc/repository/CustomerRepository.class
+com/alten/vmc/error/ErrorHandler.class

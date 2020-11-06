@@ -1,0 +1,101 @@
+sudo: required
+language: java
+jdk: oraclejdk8
+install: true
+
+cache:
+  directories:
+    - "$HOME/.cache"
+addons:
+  sonarcloud:
+    organization: "anasabbdelrahman-github" # the key of the org you chose at step #3
+    token:
+      secure: 13bb79d19f78c093008484165c479ad47efd994e # encrypted value of your token
+
+services:
+  - docker
+
+before_install:
+  - docker login -u="$DOCKER_USERNAME" -p="$DOCKER_PASSWORD";
+
+script:
+#  - cd vmc-dashboard
+#  - docker build -t $DOCKER_USERNAME/vmc-dashboard:$TRAVIS_BUILD_ID .
+#  - docker push $DOCKER_USERNAME/vmc-dashboard:$TRAVIS_BUILD_ID
+
+  - cd ../vmc-config
+  - mvn clean install
+  - sonar-scanner
+  - docker build -t $DOCKER_USERNAME/vmc-config:$TRAVIS_BUILD_ID .
+  - docker push $DOCKER_USERNAME/vmc-config:$TRAVIS_BUILD_ID
+
+  - cd ../vmc-registry
+  - mvn clean install
+  - sonar-scanner
+  - docker build -t $DOCKER_USERNAME/vmc-registry:$TRAVIS_BUILD_ID .
+  - docker push $DOCKER_USERNAME/vmc-registry:$TRAVIS_BUILD_ID
+
+  - cd ../vmc-gateway
+  - mvn clean install
+  - sonar-scanner
+  - docker build -t $DOCKER_USERNAME/vmc-gateway:$TRAVIS_BUILD_ID .
+  - docker push $DOCKER_USERNAME/vmc-gateway:$TRAVIS_BUILD_ID
+
+  - cd ../vmc-monitoring
+  - mvn clean install
+  - sonar-scanner
+  - docker build -t $DOCKER_USERNAME/vmc-monitoring:$TRAVIS_BUILD_ID .
+  - docker push $DOCKER_USERNAME/vmc-monitoring:$TRAVIS_BUILD_ID
+
+#  - cd ../vmc-turbine-stream
+#  - mvn clean install
+#  - sonar-scanner
+#  - docker build -t $DOCKER_USERNAME/vmc-turbine-stream:$TRAVIS_BUILD_ID .
+#  - docker push $DOCKER_USERNAME/vmc-turbine-stream:$TRAVIS_BUILD_ID
+
+  - cd ../vmc-vehicle
+  - mvn clean install
+  - sonar-scanner
+  - docker build -t $DOCKER_USERNAME/vmc-vehicle:$TRAVIS_BUILD_ID .
+  - docker push $DOCKER_USERNAME/vmc-vehicle:$TRAVIS_BUILD_ID
+
+  - cd ../vmc-customer
+  - mvn clean install
+  - sonar-scanner
+  - docker build -t $DOCKER_USERNAME/vmc-customer:$TRAVIS_BUILD_ID .
+  - docker push $DOCKER_USERNAME/vmc-customer:$TRAVIS_BUILD_ID
+
+  - cd ../vmc-status
+  - mvn clean install
+  - sonar-scanner
+  - docker build -t $DOCKER_USERNAME/vmc-status:$TRAVIS_BUILD_ID .
+  - docker push $DOCKER_USERNAME/vmc-status:$TRAVIS_BUILD_ID
+
+  - cd ../vmc-simulator
+  - mvn clean install
+  - sonar-scanner
+  - docker build -t $DOCKER_USERNAME/vmc-simulator:$TRAVIS_BUILD_ID .
+  - docker push $DOCKER_USERNAME/vmc-simulator:$TRAVIS_BUILD_ID
+
+after_success:
+  - bash <(curl -s https://codecov.io/bash)
+
+    #deploy:
+    #- provider: s3
+    #access_key_id: $AWS_ACCESS_KEY
+    #secret_access_key: $AWS_SECRET_KEY
+    #local_dir: dpl_cd_upload
+    #skip_cleanup: true
+    #on: $DOCKER_USERNAME/vmc-dashboard
+    #repo: travis-ci/cat-party
+    #bucket: codepipeline-us-west-2-746906032635
+
+    #- provider: codedeploy
+    #access_key_id: $AWS_ACCESS_KEY
+    #secret_access_key: $AWS_SECRET_KEY
+    #bucket: codepipeline-us-west-2-746906032635
+    #key: vmc-dashboard
+    #application: DemoApp1
+    #deployment_group: DemoAppServices1
+    #on: 
+  #- repo: $DOCKER_USERNAME/vmc-dashboard */

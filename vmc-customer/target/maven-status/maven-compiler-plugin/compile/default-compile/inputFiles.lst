@@ -1,3 +1,7 @@
+/Users/anasabdelrahman/Personal/ALTENChallenge/ALTENVehiclesMonitoring/vmc-customer/src/main/java/com/alten/vmc/swagger/SwaggerConfig.java
 /Users/anasabdelrahman/Personal/ALTENChallenge/ALTENVehiclesMonitoring/vmc-customer/src/main/java/com/alten/vmc/VmcCustomerApplication.java
 /Users/anasabdelrahman/Personal/ALTENChallenge/ALTENVehiclesMonitoring/vmc-customer/src/main/java/com/alten/vmc/controller/CustomerController.java
+/Users/anasabdelrahman/Personal/ALTENChallenge/ALTENVehiclesMonitoring/vmc-customer/src/main/java/com/alten/vmc/repository/CustomerRepository.java
 /Users/anasabdelrahman/Personal/ALTENChallenge/ALTENVehiclesMonitoring/vmc-customer/src/main/java/com/alten/vmc/model/Customer.java
+/Users/anasabdelrahman/Personal/ALTENChallenge/ALTENVehiclesMonitoring/vmc-customer/src/main/java/com/alten/vmc/service/CustomerService.java
+/Users/anasabdelrahman/Personal/ALTENChallenge/ALTENVehiclesMonitoring/vmc-customer/src/main/java/com/alten/vmc/error/ErrorHandler.java

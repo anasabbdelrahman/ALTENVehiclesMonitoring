@@ -15,14 +15,6 @@ public class Vehicle {
     private String model;
     private String plateNumber;
     private String registrationNumber;
+    private String status;
     private LocalDateTime recentUpdatedDateTime;
-
-    public Vehicle(String id, String name, String model, String plateNumber, String registrationNumber, LocalDateTime recentUpdatedDateTime) {
-        this.id = id;
-        this.name = name;
-        this.model = model;
-        this.plateNumber = plateNumber;
-        this.registrationNumber = registrationNumber;
-        this.recentUpdatedDateTime = recentUpdatedDateTime;
-    }
 }

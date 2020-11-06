@@ -1,0 +1,10 @@
+spring:
+  application:
+    name: vmc-vehicle-simulator
+  cloud:
+    config:
+      uri: http://localhost:8888
+      fail-fast: true
+      username: vmc
+      password: vmc123
+

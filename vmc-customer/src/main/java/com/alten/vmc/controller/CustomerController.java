@@ -1,6 +1,6 @@
 package com.alten.vmc.controller;
 
-import com.alten.vmc.model.CustomerModel;
+import com.alten.vmc.model.Customer;
 import com.alten.vmc.service.CustomerService;
 import com.netflix.hystrix.contrib.javanica.annotation.HystrixCommand;
 import com.netflix.hystrix.contrib.javanica.annotation.HystrixProperty;
@@ -22,7 +22,7 @@ public class CustomerController {
     CustomerService customerService;
 
     @GetMapping("/customer")
-    public List <CustomerModel> getCustomers() {
+    public List <Customer> getCustomers() {
         return customerService.findAll();
     }
 
@@ -30,7 +30,7 @@ public class CustomerController {
             @HystrixProperty(name = "execution.isolation.thread.timeoutInMilliseconds", value = "3000"),
             @HystrixProperty(name = "circuitBreaker.errorThresholdPercentage", value="60") })
     @GetMapping("/customer/{id}")
-    public CustomerModel getCustomer(@PathVariable("id")String id) {
+    public Customer getCustomer(@PathVariable("id")String id) {
         return customerService.findById(id);
     }
 }

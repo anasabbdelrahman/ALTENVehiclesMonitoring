@@ -1,5 +1,6 @@
 package com.alten.vmc.service;
 
+import com.alten.vmc.client.VehicleClient;
 import com.alten.vmc.model.Vehicle;
 import com.alten.vmc.model.VehicleStatus;
 import org.apache.commons.lang.StringUtils;
@@ -21,7 +22,7 @@ public class StatusService {
         vehicle.setName("Vehicle Name");
         vehicle.setModel("Vehicle Model");
         vehicle.setPlateNumber("ABC789");
-        vehicle.setStatus(VehicleStatus.CONNECTED.getStatusCode);
+        vehicle.setStatus(VehicleStatus.CONNECTED.getStatusCode());
 
         return vehicle;
     }

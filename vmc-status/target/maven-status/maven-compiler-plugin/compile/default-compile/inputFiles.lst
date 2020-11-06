@@ -1,4 +1,5 @@
 /Users/anasabdelrahman/Personal/ALTENChallenge/ALTENVehiclesMonitoring/vmc-status/src/main/java/com/alten/vmc/error/ErrorHandler.java
+/Users/anasabdelrahman/Personal/ALTENChallenge/ALTENVehiclesMonitoring/vmc-status/src/main/java/com/alten/vmc/swagger/SwaggerConfig.java
 /Users/anasabdelrahman/Personal/ALTENChallenge/ALTENVehiclesMonitoring/vmc-status/src/main/java/com/alten/vmc/service/StatusService.java
 /Users/anasabdelrahman/Personal/ALTENChallenge/ALTENVehiclesMonitoring/vmc-status/src/main/java/com/alten/vmc/client/VehicleClient.java
 /Users/anasabdelrahman/Personal/ALTENChallenge/ALTENVehiclesMonitoring/vmc-status/src/main/java/com/alten/vmc/controller/StatusController.java

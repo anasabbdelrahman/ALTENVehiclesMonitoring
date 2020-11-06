@@ -14,10 +14,4 @@ import org.springframework.web.client.RestTemplate;
 public class VmcVehicleApplication {
     public static void main(String[] args) { SpringApplication.run(VmcVehicleApplication.class, args);
     }
-
-    @Bean
-    @LoadBalanced
-    public restTemplate() {
-        return new RestTemplate();
-    }
 }

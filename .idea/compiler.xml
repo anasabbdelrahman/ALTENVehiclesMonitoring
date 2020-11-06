@@ -2,6 +2,7 @@
 <project version="4">
   <component name="CompilerConfiguration">
     <annotationProcessing>
+      <profile default="true" name="Default" enabled="true" />
       <profile name="Maven default annotation processors profile" enabled="true">
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
@@ -29,6 +30,7 @@
       <module name="vmc-gateway2" options="-parameters" />
       <module name="vmc-monitoring" options="-parameters" />
       <module name="vmc-registery" options="-parameters" />
+      <module name="vmc-simulator" options="-parameters" />
       <module name="vmc-status" options="-parameters" />
       <module name="vmc-vehicle" options="-parameters" />
     </option>
