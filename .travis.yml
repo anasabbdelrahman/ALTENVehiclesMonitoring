@@ -8,9 +8,9 @@ cache:
     - "$HOME/.cache"
 addons:
   sonarcloud:
-    organization: "anasabbdelrahman-github" # the key of the org you chose at step #3
-#    token:
-#      secure: 13bb79d19f78c093008484165c479ad47efd994e # encrypted value of your token
+    organization: "anasabdelrahman-github" # the key of the org you chose at step #3
+    token:
+      secure: a3ca87236c0285fd05fd22931e4873f2750931e3 # encrypted value of your token
 
 services:
   - docker
@@ -25,25 +25,25 @@ script:
 
   - cd vmc-config
   - mvn clean install
-#  - sonar-scanner
+  - sonar-scanner
   - docker build -t $DOCKER_USERNAME/vmc-config:$TRAVIS_BUILD_ID .
   - docker push $DOCKER_USERNAME/vmc-config:$TRAVIS_BUILD_ID
 
   - cd ../vmc-registry
   - mvn clean install
-#  - sonar-scanner
+  - sonar-scanner
   - docker build -t $DOCKER_USERNAME/vmc-registry:$TRAVIS_BUILD_ID .
   - docker push $DOCKER_USERNAME/vmc-registry:$TRAVIS_BUILD_ID
 
   - cd ../vmc-gateway
   - mvn clean install
-#  - sonar-scanner
+  - sonar-scanner
   - docker build -t $DOCKER_USERNAME/vmc-gateway:$TRAVIS_BUILD_ID .
   - docker push $DOCKER_USERNAME/vmc-gateway:$TRAVIS_BUILD_ID
 
   - cd ../vmc-monitoring
   - mvn clean install
-#  - sonar-scanner
+  - sonar-scanner
   - docker build -t $DOCKER_USERNAME/vmc-monitoring:$TRAVIS_BUILD_ID .
   - docker push $DOCKER_USERNAME/vmc-monitoring:$TRAVIS_BUILD_ID
 
@@ -55,25 +55,25 @@ script:
 
   - cd ../vmc-vehicle
   - mvn clean install
-#  - sonar-scanner
+  - sonar-scanner
   - docker build -t $DOCKER_USERNAME/vmc-vehicle:$TRAVIS_BUILD_ID .
   - docker push $DOCKER_USERNAME/vmc-vehicle:$TRAVIS_BUILD_ID
 
   - cd ../vmc-customer
   - mvn clean install
-#  - sonar-scanner
+  - sonar-scanner
   - docker build -t $DOCKER_USERNAME/vmc-customer:$TRAVIS_BUILD_ID .
   - docker push $DOCKER_USERNAME/vmc-customer:$TRAVIS_BUILD_ID
 
   - cd ../vmc-status
   - mvn clean install
-#  - sonar-scanner
+  - sonar-scanner
   - docker build -t $DOCKER_USERNAME/vmc-status:$TRAVIS_BUILD_ID .
   - docker push $DOCKER_USERNAME/vmc-status:$TRAVIS_BUILD_ID
 
   - cd ../vmc-simulator
   - mvn clean install
-#  - sonar-scanner
+  - sonar-scanner
   - docker build -t $DOCKER_USERNAME/vmc-simulator:$TRAVIS_BUILD_ID .
   - docker push $DOCKER_USERNAME/vmc-simulator:$TRAVIS_BUILD_ID
 
