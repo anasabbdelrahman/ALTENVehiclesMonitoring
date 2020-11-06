@@ -77,31 +77,31 @@ services:
     networks:
       - vmc_app_net
 
-#  status-service:
-#    build: ./vmc-status
-#    image: anasabdelrahman/vmc-status
-#    ports:
-#      - '8052:8052'
-#    depends_on:
-#      - config-service
-#      - registry-service
-#      - vehicle-service
-#      - customer-service
-#    networks:
-#      - vmc_app_net
+  status-service:
+    build: ./vmc-status
+    image: anasabdelrahman/vmc-status
+    ports:
+      - '8052:8052'
+    depends_on:
+      - config-service
+      - registry-service
+      - vehicle-service
+      - customer-service
+    networks:
+      - vmc_app_net
 
-#  simulator-service:
-#    build: ./vmc-simulator
-#    image: anasabdelrahman/vmc-simulator
-#    ports:
-#      - '8053:8053'
-#    depends_on:
-#      - config-service
-#      - registry-service
-#      - vehicle-service
-#      - customer-service
-#    networks:
-#      - vmc_app_net
+  simulator-service:
+    build: ./vmc-simulator
+    image: anasabdelrahman/vmc-simulator
+    ports:
+      - '8053:8053'
+    depends_on:
+      - config-service
+      - registry-service
+      - vehicle-service
+      - customer-service
+    networks:
+      - vmc_app_net
 
 networks:
   vmc_app_net:

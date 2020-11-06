@@ -65,17 +65,17 @@ script:
   - docker build -t $DOCKER_USERNAME/vmc-customer:$TRAVIS_BUILD_ID .
   - docker push $DOCKER_USERNAME/vmc-customer:$TRAVIS_BUILD_ID
 
-#  - cd ../vmc-status
-#  - mvn clean install
-##  - sonar-scanner
-#  - docker build -t $DOCKER_USERNAME/vmc-status:$TRAVIS_BUILD_ID .
-#  - docker push $DOCKER_USERNAME/vmc-status:$TRAVIS_BUILD_ID
+  - cd ../vmc-status
+  - mvn clean install
+#  - sonar-scanner
+  - docker build -t $DOCKER_USERNAME/vmc-status:$TRAVIS_BUILD_ID .
+  - docker push $DOCKER_USERNAME/vmc-status:$TRAVIS_BUILD_ID
 
-#  - cd ../vmc-simulator
-#  - mvn clean install
-##  - sonar-scanner
-#  - docker build -t $DOCKER_USERNAME/vmc-simulator:$TRAVIS_BUILD_ID .
-#  - docker push $DOCKER_USERNAME/vmc-simulator:$TRAVIS_BUILD_ID
+  - cd ../vmc-simulator
+  - mvn clean install
+#  - sonar-scanner
+  - docker build -t $DOCKER_USERNAME/vmc-simulator:$TRAVIS_BUILD_ID .
+  - docker push $DOCKER_USERNAME/vmc-simulator:$TRAVIS_BUILD_ID
 
 #after_success:
 #  - bash <(curl -s https://codecov.io/bash)
