@@ -29,53 +29,53 @@ script:
   - docker build -t $DOCKER_USERNAME/vmc-config:$TRAVIS_BUILD_ID .
   - docker push $DOCKER_USERNAME/vmc-config:$TRAVIS_BUILD_ID
 
-#  - cd ../vmc-registry
+  - cd ../vmc-registry
+  - mvn clean install
+#  - sonar-scanner
+  - docker build -t $DOCKER_USERNAME/vmc-registry:$TRAVIS_BUILD_ID .
+  - docker push $DOCKER_USERNAME/vmc-registry:$TRAVIS_BUILD_ID
+
+  - cd ../vmc-gateway
+  - mvn clean install
+#  - sonar-scanner
+  - docker build -t $DOCKER_USERNAME/vmc-gateway:$TRAVIS_BUILD_ID .
+  - docker push $DOCKER_USERNAME/vmc-gateway:$TRAVIS_BUILD_ID
+
+  - cd ../vmc-monitoring
+  - mvn clean install
+#  - sonar-scanner
+  - docker build -t $DOCKER_USERNAME/vmc-monitoring:$TRAVIS_BUILD_ID .
+  - docker push $DOCKER_USERNAME/vmc-monitoring:$TRAVIS_BUILD_ID
+
+#  - cd ../vmc-turbine-stream
 #  - mvn clean install
 #  - sonar-scanner
-#  - docker build -t $DOCKER_USERNAME/vmc-registry:$TRAVIS_BUILD_ID .
-#  - docker push $DOCKER_USERNAME/vmc-registry:$TRAVIS_BUILD_ID
-#
-#  - cd ../vmc-gateway
-#  - mvn clean install
+#  - docker build -t $DOCKER_USERNAME/vmc-turbine-stream:$TRAVIS_BUILD_ID .
+#  - docker push $DOCKER_USERNAME/vmc-turbine-stream:$TRAVIS_BUILD_ID
+
+  - cd ../vmc-vehicle
+  - mvn clean install
 #  - sonar-scanner
-#  - docker build -t $DOCKER_USERNAME/vmc-gateway:$TRAVIS_BUILD_ID .
-#  - docker push $DOCKER_USERNAME/vmc-gateway:$TRAVIS_BUILD_ID
-#
-#  - cd ../vmc-monitoring
-#  - mvn clean install
+  - docker build -t $DOCKER_USERNAME/vmc-vehicle:$TRAVIS_BUILD_ID .
+  - docker push $DOCKER_USERNAME/vmc-vehicle:$TRAVIS_BUILD_ID
+
+  - cd ../vmc-customer
+  - mvn clean install
 #  - sonar-scanner
-#  - docker build -t $DOCKER_USERNAME/vmc-monitoring:$TRAVIS_BUILD_ID .
-#  - docker push $DOCKER_USERNAME/vmc-monitoring:$TRAVIS_BUILD_ID
-#
-##  - cd ../vmc-turbine-stream
-##  - mvn clean install
-##  - sonar-scanner
-##  - docker build -t $DOCKER_USERNAME/vmc-turbine-stream:$TRAVIS_BUILD_ID .
-##  - docker push $DOCKER_USERNAME/vmc-turbine-stream:$TRAVIS_BUILD_ID
-#
-#  - cd ../vmc-vehicle
-#  - mvn clean install
+  - docker build -t $DOCKER_USERNAME/vmc-customer:$TRAVIS_BUILD_ID .
+  - docker push $DOCKER_USERNAME/vmc-customer:$TRAVIS_BUILD_ID
+
+  - cd ../vmc-status
+  - mvn clean install
 #  - sonar-scanner
-#  - docker build -t $DOCKER_USERNAME/vmc-vehicle:$TRAVIS_BUILD_ID .
-#  - docker push $DOCKER_USERNAME/vmc-vehicle:$TRAVIS_BUILD_ID
-#
-#  - cd ../vmc-customer
-#  - mvn clean install
+  - docker build -t $DOCKER_USERNAME/vmc-status:$TRAVIS_BUILD_ID .
+  - docker push $DOCKER_USERNAME/vmc-status:$TRAVIS_BUILD_ID
+
+  - cd ../vmc-simulator
+  - mvn clean install
 #  - sonar-scanner
-#  - docker build -t $DOCKER_USERNAME/vmc-customer:$TRAVIS_BUILD_ID .
-#  - docker push $DOCKER_USERNAME/vmc-customer:$TRAVIS_BUILD_ID
-#
-#  - cd ../vmc-status
-#  - mvn clean install
-#  - sonar-scanner
-#  - docker build -t $DOCKER_USERNAME/vmc-status:$TRAVIS_BUILD_ID .
-#  - docker push $DOCKER_USERNAME/vmc-status:$TRAVIS_BUILD_ID
-#
-#  - cd ../vmc-simulator
-#  - mvn clean install
-#  - sonar-scanner
-#  - docker build -t $DOCKER_USERNAME/vmc-simulator:$TRAVIS_BUILD_ID .
-#  - docker push $DOCKER_USERNAME/vmc-simulator:$TRAVIS_BUILD_ID
+  - docker build -t $DOCKER_USERNAME/vmc-simulator:$TRAVIS_BUILD_ID .
+  - docker push $DOCKER_USERNAME/vmc-simulator:$TRAVIS_BUILD_ID
 
 #after_success:
 #  - bash <(curl -s https://codecov.io/bash)
