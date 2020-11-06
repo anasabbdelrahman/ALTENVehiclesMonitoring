@@ -8,40 +8,40 @@ services:
     networks:
       - vmc_app_net
 
-  registry-service:
-    build: ./vmc-registry
-    image: anasabdelrahman/vmc-registry
-    ports:
-      - '8761:8761'
-    depends_on:
-      - config-service
-    networks:
-      - vmc_app_net
-
-  gateway-service:
-    build: ./vmc-gateway
-    image: anasabdelrahman/vmc-gateway
-    ports:
-      - '8080:8080'
-    depends_on:
-      - config-service
-      - registry-service
-      - vehicle-service
-      - customer-service
-      - status-service
-    networks:
-      - vmc_app_net
-
-  monitoring-service:
-    build: ./vmc-monitoring
-    image: anasabdelrahman/vmc-monitoring
-    ports:
-      - '8866:8866'
-    depends_on:
-      - config-service
-      - registry-service
-    networks:
-      - vmc_app_net
+#  registry-service:
+#    build: ./vmc-registry
+#    image: anasabdelrahman/vmc-registry
+#    ports:
+#      - '8761:8761'
+#    depends_on:
+#      - config-service
+#    networks:
+#      - vmc_app_net
+#
+#  gateway-service:
+#    build: ./vmc-gateway
+#    image: anasabdelrahman/vmc-gateway
+#    ports:
+#      - '8080:8080'
+#    depends_on:
+#      - config-service
+#      - registry-service
+#      - vehicle-service
+#      - customer-service
+#      - status-service
+#    networks:
+#      - vmc_app_net
+#
+#  monitoring-service:
+#    build: ./vmc-monitoring
+#    image: anasabdelrahman/vmc-monitoring
+#    ports:
+#      - '8866:8866'
+#    depends_on:
+#      - config-service
+#      - registry-service
+#    networks:
+#      - vmc_app_net
 
 #  turbine-stream-service:
 #    build: ./vmc-turbine-stream
@@ -55,54 +55,54 @@ services:
 #    networks:
 #      - vmc_app_net
 
-  vehicle-service:
-    build: ./vmc-vehicle
-    image: anasabdelrahman/vmc-vehicle
-    ports:
-      - '8050:8050'
-    depends_on:
-      - config-service
-      - registry-service
-    networks:
-      - vmc_app_net
-
-  customer-service:
-    build: ./vmc-customer
-    image: anasabdelrahman/vmc-customer
-    ports:
-      - '8051:8051'
-    depends_on:
-      - config-service
-      - registry-service
-    networks:
-      - vmc_app_net
-
-  status-service:
-    build: ./vmc-status
-    image: anasabdelrahman/vmc-status
-    ports:
-      - '8052:8052'
-    depends_on:
-      - config-service
-      - registry-service
-      - vehicle-service
-      - customer-service
-    networks:
-      - vmc_app_net
-
-  simulator-service:
-    build: ./vmc-simulator
-    image: anasabdelrahman/vmc-simulator
-    ports:
-      - '8053:8053'
-    depends_on:
-      - config-service
-      - registry-service
-      - vehicle-service
-      - customer-service
-    networks:
-      - vmc_app_net
-
+#  vehicle-service:
+#    build: ./vmc-vehicle
+#    image: anasabdelrahman/vmc-vehicle
+#    ports:
+#      - '8050:8050'
+#    depends_on:
+#      - config-service
+#      - registry-service
+#    networks:
+#      - vmc_app_net
+#
+#  customer-service:
+#    build: ./vmc-customer
+#    image: anasabdelrahman/vmc-customer
+#    ports:
+#      - '8051:8051'
+#    depends_on:
+#      - config-service
+#      - registry-service
+#    networks:
+#      - vmc_app_net
+#
+#  status-service:
+#    build: ./vmc-status
+#    image: anasabdelrahman/vmc-status
+#    ports:
+#      - '8052:8052'
+#    depends_on:
+#      - config-service
+#      - registry-service
+#      - vehicle-service
+#      - customer-service
+#    networks:
+#      - vmc_app_net
+#
+#  simulator-service:
+#    build: ./vmc-simulator
+#    image: anasabdelrahman/vmc-simulator
+#    ports:
+#      - '8053:8053'
+#    depends_on:
+#      - config-service
+#      - registry-service
+#      - vehicle-service
+#      - customer-service
+#    networks:
+#      - vmc_app_net
+#
 networks:
   vmc_app_net:
     driver: bridge
