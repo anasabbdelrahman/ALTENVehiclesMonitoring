@@ -10,7 +10,7 @@ addons:
   sonarcloud:
     organization: "anasabdelrahman-github" # the key of the org you chose at step #3
     token:
-      secure: "ebCbx2/XkNrPrpHdYje8uOiuLMUPx7mqZmkJhcbueiMsjoAMMx4m3k09GRKZj0fTYo4mdGlA8lU3SwoLwCf3sj8MiseiKxsjVXymbIXWj+06zMGebBzL+jbH8jZTLAc2CzbH1xYRgEVUhFOpYV4P6rzVinYwnOM4Xa5GATm9XKrYJmfHStFVhp0yfr/N1sw6EEBanjykXMXdapaLFsySqiwIf5NCaGTABz3TKc+vxzzr6TJaR4HCx4wQ9CIx3c9v+vTujJru96txZ5mLmIA2NyOk3yjNxAtxvxqvBI3U+l84blvQgj0Nefv5zuPrRUguCIWhv6aYvhJU5GH1fTfw90gMG00sab7+IuH2NzEYAA0E3tA865V3JLdOj+fJWJdSysfksI4BtgBgC0CmsuZNdx72c8pR/xEvyaFJkupQ7HEpqy/I+mIQ3B1fKUPHsGOr0tvwuV1PfoGia+jrQorvao0jAXQST0IuuFtLW9dmEd6GycAPilptgleHoeQpwA80wq9uhmA/gvkg1zFykB3O6BQxPY8r9du6m0HShc0SSfiAyA3exmbks0CfW0vK86XjUGkQthS8QQ11FVTLn47cslrD7jmblQlawUkta5a6+kunTFx3vykYS8ptYmTRzOmqXTeILuP0e+FqsD4LjIwTr1RAg4KX/qxpGi8BrLKqz3Y="
+      secure: "M3X3iigkYCILBwVEPspQ76TiM0pBRbRdu/X8CDMJNA9cYqyQSljDhtcH1Y6CKVBWRmrgs2QHtmHvUykYrMDmo5ucJUz6ORECg8cESyplVWFZ/z9H48K9SB9ocOKIZZzba3SaMSoI5jMTTRePDf1Dkzi5VEDIM6pFfQbeh0c6WHcXcw8fIsz6qUw1gyMfltLk6hHY6ACTyN3OYO4nE8q3adsqqb1nNkXhpzCDmkVyggsQq/Yr8IuGAhIkVhHNr70JxPojBDPSaP4QPRR5OM4f0nDbpAg8lrlG+QC8cTPNSdYnjSZMWNtCsNX9iU+V0I/ntDc3QhPAziAtomuTpQ1z8R1PMV5/SsTRXnnrswtA/QCEqnE8de3PFnP8dbA0wZK+QldiKfX0wDmmndv+R3Kpn1eDEhPGJ2AkCa/++P0/58VmQ7dVjrzUQ/jOAGjRNVwb4X5jievUM/usOJHUNOqpED0/qoyOuTIryusvzjNHVYXh5s2Gs2Lrqc1J78tJBFP/ERev+KofRXHNJxmWHoM29u6ImYRiocCg9eeAhj1oJOoDNT4GIw8mlr7zRahCSc3s96XMfrTFgcUMHojyXKsb67yDQsfwLsFkBDf3qfC0X9rKggSFQ7TWWLIRDW3jzOoeFV9oZwf0NSgXR5k8Uzw+Dl0gaEK0J6uxHqhSKr4Cq/s="
 
   # encrypted value of your token
 
@@ -24,6 +24,10 @@ script:
 #  - cd vmc-dashboard
 #  - docker build -t $DOCKER_USERNAME/vmc-dashboard:$TRAVIS_BUILD_ID .
 #  - docker push $DOCKER_USERNAME/vmc-dashboard:$TRAVIS_BUILD_ID
+
+  - mvn clean org.jacoco:jacoco-maven-plugin:prepare-agent install sonar:sonar
+  -Dsonar.scanner.force-deprecated-java-version=true
+  -Dsonar.projectKey=ANASABDELRAHMAN_VM
 
   - cd vmc-config
   - mvn clean install
