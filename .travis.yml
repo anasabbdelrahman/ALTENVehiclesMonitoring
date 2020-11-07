@@ -8,8 +8,8 @@ cache:
 addons:
   sonarcloud:
     organization: anasabbdelrahman
-    token:
-      secure: M3X3iigkYCILBwVEPspQ76TiM0pBRbRdu/X8CDMJNA9cYqyQSljDhtcH1Y6CKVBWRmrgs2QHtmHvUykYrMDmo5ucJUz6ORECg8cESyplVWFZ/z9H48K9SB9ocOKIZZzba3SaMSoI5jMTTRePDf1Dkzi5VEDIM6pFfQbeh0c6WHcXcw8fIsz6qUw1gyMfltLk6hHY6ACTyN3OYO4nE8q3adsqqb1nNkXhpzCDmkVyggsQq/Yr8IuGAhIkVhHNr70JxPojBDPSaP4QPRR5OM4f0nDbpAg8lrlG+QC8cTPNSdYnjSZMWNtCsNX9iU+V0I/ntDc3QhPAziAtomuTpQ1z8R1PMV5/SsTRXnnrswtA/QCEqnE8de3PFnP8dbA0wZK+QldiKfX0wDmmndv+R3Kpn1eDEhPGJ2AkCa/++P0/58VmQ7dVjrzUQ/jOAGjRNVwb4X5jievUM/usOJHUNOqpED0/qoyOuTIryusvzjNHVYXh5s2Gs2Lrqc1J78tJBFP/ERev+KofRXHNJxmWHoM29u6ImYRiocCg9eeAhj1oJOoDNT4GIw8mlr7zRahCSc3s96XMfrTFgcUMHojyXKsb67yDQsfwLsFkBDf3qfC0X9rKggSFQ7TWWLIRDW3jzOoeFV9oZwf0NSgXR5k8Uzw+Dl0gaEK0J6uxHqhSKr4Cq/s=
+#    token:
+#      secure: M3X3iigkYCILBwVEPspQ76TiM0pBRbRdu/X8CDMJNA9cYqyQSljDhtcH1Y6CKVBWRmrgs2QHtmHvUykYrMDmo5ucJUz6ORECg8cESyplVWFZ/z9H48K9SB9ocOKIZZzba3SaMSoI5jMTTRePDf1Dkzi5VEDIM6pFfQbeh0c6WHcXcw8fIsz6qUw1gyMfltLk6hHY6ACTyN3OYO4nE8q3adsqqb1nNkXhpzCDmkVyggsQq/Yr8IuGAhIkVhHNr70JxPojBDPSaP4QPRR5OM4f0nDbpAg8lrlG+QC8cTPNSdYnjSZMWNtCsNX9iU+V0I/ntDc3QhPAziAtomuTpQ1z8R1PMV5/SsTRXnnrswtA/QCEqnE8de3PFnP8dbA0wZK+QldiKfX0wDmmndv+R3Kpn1eDEhPGJ2AkCa/++P0/58VmQ7dVjrzUQ/jOAGjRNVwb4X5jievUM/usOJHUNOqpED0/qoyOuTIryusvzjNHVYXh5s2Gs2Lrqc1J78tJBFP/ERev+KofRXHNJxmWHoM29u6ImYRiocCg9eeAhj1oJOoDNT4GIw8mlr7zRahCSc3s96XMfrTFgcUMHojyXKsb67yDQsfwLsFkBDf3qfC0X9rKggSFQ7TWWLIRDW3jzOoeFV9oZwf0NSgXR5k8Uzw+Dl0gaEK0J6uxHqhSKr4Cq/s=
 services:
 - docker
 before_install:
@@ -20,41 +20,41 @@ script:
   -Dsonar.projectKey=anasabbdelrahman_ALTENVehiclesMonitoring
 - docker build -t $DOCKER_USERNAME/vmc-config:$TRAVIS_BUILD_ID .
 - docker push $DOCKER_USERNAME/vmc-config:$TRAVIS_BUILD_ID
-#- cd ../vmc-registry
-#- mvn clean org.jacoco:jacoco-maven-plugin:prepare-agent install sonar:sonar -Dsonar.scanner.force-deprecated-java-version=true
-#  -Dsonar.projectKey=ANASABDELRAHMAN_VMC
-#- docker build -t $DOCKER_USERNAME/vmc-registry:$TRAVIS_BUILD_ID .
-#- docker push $DOCKER_USERNAME/vmc-registry:$TRAVIS_BUILD_ID
-#- cd ../vmc-gateway
-#- mvn clean org.jacoco:jacoco-maven-plugin:prepare-agent install sonar:sonar -Dsonar.scanner.force-deprecated-java-version=true
-#  -Dsonar.projectKey=ANASABDELRAHMAN_VMC
-#- docker build -t $DOCKER_USERNAME/vmc-gateway:$TRAVIS_BUILD_ID .
-#- docker push $DOCKER_USERNAME/vmc-gateway:$TRAVIS_BUILD_ID
-#- cd ../vmc-monitoring
-#- mvn clean org.jacoco:jacoco-maven-plugin:prepare-agent install sonar:sonar -Dsonar.scanner.force-deprecated-java-version=true
-#  -Dsonar.projectKey=ANASABDELRAHMAN_VMC
-#- docker build -t $DOCKER_USERNAME/vmc-monitoring:$TRAVIS_BUILD_ID .
-#- docker push $DOCKER_USERNAME/vmc-monitoring:$TRAVIS_BUILD_ID
-#- cd ../vmc-vehicle
-#- mvn clean org.jacoco:jacoco-maven-plugin:prepare-agent install sonar:sonar -Dsonar.scanner.force-deprecated-java-version=true
-#  -Dsonar.projectKey=ANASABDELRAHMAN_VMC
-#- docker build -t $DOCKER_USERNAME/vmc-vehicle:$TRAVIS_BUILD_ID .
-#- docker push $DOCKER_USERNAME/vmc-vehicle:$TRAVIS_BUILD_ID
-#- cd ../vmc-customer
-#- mvn clean org.jacoco:jacoco-maven-plugin:prepare-agent install sonar:sonar -Dsonar.scanner.force-deprecated-java-version=true
-#  -Dsonar.projectKey=ANASABDELRAHMAN_VMC
-#- docker build -t $DOCKER_USERNAME/vmc-customer:$TRAVIS_BUILD_ID .
-#- docker push $DOCKER_USERNAME/vmc-customer:$TRAVIS_BUILD_ID
-#- cd ../vmc-status
-#- mvn clean org.jacoco:jacoco-maven-plugin:prepare-agent install sonar:sonar -Dsonar.scanner.force-deprecated-java-version=true
-#  -Dsonar.projectKey=ANASABDELRAHMAN_VMC
-#- docker build -t $DOCKER_USERNAME/vmc-status:$TRAVIS_BUILD_ID .
-#- docker push $DOCKER_USERNAME/vmc-status:$TRAVIS_BUILD_ID
-#- cd ../vmc-simulator
-#- mvn clean org.jacoco:jacoco-maven-plugin:prepare-agent install sonar:sonar -Dsonar.scanner.force-deprecated-java-version=true
-#  -Dsonar.projectKey=ANASABDELRAHMAN_VMC
-#- docker build -t $DOCKER_USERNAME/vmc-simulator:$TRAVIS_BUILD_ID .
-#- docker push $DOCKER_USERNAME/vmc-simulator:$TRAVIS_BUILD_ID
+- cd ../vmc-registry
+- mvn clean org.jacoco:jacoco-maven-plugin:prepare-agent install sonar:sonar -Dsonar.scanner.force-deprecated-java-version=true
+  -Dsonar.projectKey=ANASABDELRAHMAN_VMC
+- docker build -t $DOCKER_USERNAME/vmc-registry:$TRAVIS_BUILD_ID .
+- docker push $DOCKER_USERNAME/vmc-registry:$TRAVIS_BUILD_ID
+- cd ../vmc-gateway
+- mvn clean org.jacoco:jacoco-maven-plugin:prepare-agent install sonar:sonar -Dsonar.scanner.force-deprecated-java-version=true
+  -Dsonar.projectKey=ANASABDELRAHMAN_VMC
+- docker build -t $DOCKER_USERNAME/vmc-gateway:$TRAVIS_BUILD_ID .
+- docker push $DOCKER_USERNAME/vmc-gateway:$TRAVIS_BUILD_ID
+- cd ../vmc-monitoring
+- mvn clean org.jacoco:jacoco-maven-plugin:prepare-agent install sonar:sonar -Dsonar.scanner.force-deprecated-java-version=true
+  -Dsonar.projectKey=ANASABDELRAHMAN_VMC
+- docker build -t $DOCKER_USERNAME/vmc-monitoring:$TRAVIS_BUILD_ID .
+- docker push $DOCKER_USERNAME/vmc-monitoring:$TRAVIS_BUILD_ID
+- cd ../vmc-vehicle
+- mvn clean org.jacoco:jacoco-maven-plugin:prepare-agent install sonar:sonar -Dsonar.scanner.force-deprecated-java-version=true
+  -Dsonar.projectKey=ANASABDELRAHMAN_VMC
+- docker build -t $DOCKER_USERNAME/vmc-vehicle:$TRAVIS_BUILD_ID .
+- docker push $DOCKER_USERNAME/vmc-vehicle:$TRAVIS_BUILD_ID
+- cd ../vmc-customer
+- mvn clean org.jacoco:jacoco-maven-plugin:prepare-agent install sonar:sonar -Dsonar.scanner.force-deprecated-java-version=true
+  -Dsonar.projectKey=ANASABDELRAHMAN_VMC
+- docker build -t $DOCKER_USERNAME/vmc-customer:$TRAVIS_BUILD_ID .
+- docker push $DOCKER_USERNAME/vmc-customer:$TRAVIS_BUILD_ID
+- cd ../vmc-status
+- mvn clean org.jacoco:jacoco-maven-plugin:prepare-agent install sonar:sonar -Dsonar.scanner.force-deprecated-java-version=true
+  -Dsonar.projectKey=ANASABDELRAHMAN_VMC
+- docker build -t $DOCKER_USERNAME/vmc-status:$TRAVIS_BUILD_ID .
+- docker push $DOCKER_USERNAME/vmc-status:$TRAVIS_BUILD_ID
+- cd ../vmc-simulator
+- mvn clean org.jacoco:jacoco-maven-plugin:prepare-agent install sonar:sonar -Dsonar.scanner.force-deprecated-java-version=true
+  -Dsonar.projectKey=ANASABDELRAHMAN_VMC
+- docker build -t $DOCKER_USERNAME/vmc-simulator:$TRAVIS_BUILD_ID .
+- docker push $DOCKER_USERNAME/vmc-simulator:$TRAVIS_BUILD_ID
 env:
   global:
-  - secure: nHCq0ckWTs5Df2NTAMVwr23SlR3B6lJN0i1QZrwTd1q5kNPJ9mTsn7iGORmGznkOyc0u/3ij06ZlfTlMBgVAv0QGKkx0hLGQRHGR7fWQpUWy/WTahH8WviFFOljSojZv+sH/raihRM3/1jfa68XERS4sn+XQzEKZuABPWyBjFJcLGQ3voKO4d/ddnOFFaHhCfI26bBNmq6GJbYcJQGMptGCfPpOPNfdcT0IG/wRgLaeUbiMC7RtE7FUk/YoGw8sd2LL1xLqQnIqNLWzL6NVPIqB3JN/206Y+TIt9Z+xpqAYOVGL63MHSM9OYXXuNx8Y63nRzSg1izLxe0kIn5rB4fANtabZSolzqwl2dm4BkdpwH0vcW2K12R45zu5B6QBOiU4czL/+TlVqe8idRbpBk67Ch/VBFm7Lx0QM3eqf48naGPtQWNi6JGT6FL2+GluCEfhr5h0BxFXnMANfe5ciiJ+iuUkSpHjF9QE4p07fm+4ZoI9P9LhnHNRMzYHWggbcjFm1ksJTCqa4RGDvapvN8cicJJtNgn9PusUi1Cui1prKITH2SWjh+bKGV/8cFuF+tXtJmJaSWL5f/L1mHSUZusyOJtg98FCMS10zx6GMGCvDz1hJ8U+LisT9NSLFHmHuwaDOdyiQdyuUIdd3J8ftM7Wj2hfCA+JLuROFbXZ52zdo=
+    secure: nZoEMymmVls6td2qPWynBynbfz+zYNAzzoE9/rPSzOqX+FTyS/Vbx/uByQaxSTrTKTf8RJl+Qkc2brCwgfttTJgc/xXgZgsk0lDdyFpgIk7kSpXl1ZVsabnYvI6IlAKC69utj0Kmkst4ORGsYXOR712G/Bw7CNY32kahh0BIZiNOfNTTmIQMdA2DKr3D3UxUbyEwozkTbu69nuT3EV3WB6OZjULyeLsGbWKbVZY05EDsK9kbfl6CTO6kZ5/fLHmDklYS+Up/dpyNouOcHrV0pBlujzunEMZKl0tnH/BFin7bLCK5LIxAnvzq+9pTIWXiSPV4fi3/A+0Q6AuCEtZ8TG3cnuEcl6rM6/362g+pUoHkNyoZdBbpPcti7B87/q/hWKGU6YowAotZu6j54d1nvu1m3XbA8dyS42Nj8QoDf0/MhnoLdNTjoxELa0VDHaWFR4P8Gx9Pf9trsFnZUfB4BMDvJO0cGiYgE342Ng1WSw+hLyDD/ZV53UkFPVSshgWRf2cBqN8qTW3Byu1d5XIsoUhBDKg9oxBPxSowNp+SFp/4GgBnlrRcb/W4pT93BuOp2xA6pprK9R0fZwLrOJnTbZmCStqFEBVYfrW0EEByDwEJn0x9uMztwf8WhlKkBUY6I8EKc82IyvZLWE7IRjads9iUSYIqObCpY34k6aMaUAM=
