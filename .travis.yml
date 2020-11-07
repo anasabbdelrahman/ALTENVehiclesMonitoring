@@ -16,44 +16,45 @@ before_install:
 - docker login -u="$DOCKER_USERNAME" -p="$DOCKER_PASSWORD";
 script:
 - cd vmc-config
-- mvn clean org.jacoco:jacoco-maven-plugin:prepare-agent install sonar:sonar -Dsonar.scanner.force-deprecated-java-version=true -Dsonar.projectKey=ANASABDELRAHMAN_VMC
+- mvn clean org.jacoco:jacoco-maven-plugin:prepare-agent install sonar:sonar -Dsonar.scanner.force-deprecated-java-version=true
+  -Dsonar.projectKey=ANASABDELRAHMAN_VMC
 - docker build -t $DOCKER_USERNAME/vmc-config:$TRAVIS_BUILD_ID .
 - docker push $DOCKER_USERNAME/vmc-config:$TRAVIS_BUILD_ID
-
 - cd ../vmc-registry
-- mvn clean org.jacoco:jacoco-maven-plugin:prepare-agent install sonar:sonar -Dsonar.scanner.force-deprecated-java-version=true -Dsonar.projectKey=ANASABDELRAHMAN_VMC
+- mvn clean org.jacoco:jacoco-maven-plugin:prepare-agent install sonar:sonar -Dsonar.scanner.force-deprecated-java-version=true
+  -Dsonar.projectKey=ANASABDELRAHMAN_VMC
 - docker build -t $DOCKER_USERNAME/vmc-registry:$TRAVIS_BUILD_ID .
 - docker push $DOCKER_USERNAME/vmc-registry:$TRAVIS_BUILD_ID
-
 - cd ../vmc-gateway
-- mvn clean org.jacoco:jacoco-maven-plugin:prepare-agent install sonar:sonar -Dsonar.scanner.force-deprecated-java-version=true -Dsonar.projectKey=ANASABDELRAHMAN_VMC
+- mvn clean org.jacoco:jacoco-maven-plugin:prepare-agent install sonar:sonar -Dsonar.scanner.force-deprecated-java-version=true
+  -Dsonar.projectKey=ANASABDELRAHMAN_VMC
 - docker build -t $DOCKER_USERNAME/vmc-gateway:$TRAVIS_BUILD_ID .
 - docker push $DOCKER_USERNAME/vmc-gateway:$TRAVIS_BUILD_ID
-
 - cd ../vmc-monitoring
-- mvn clean org.jacoco:jacoco-maven-plugin:prepare-agent install sonar:sonar -Dsonar.scanner.force-deprecated-java-version=true -Dsonar.projectKey=ANASABDELRAHMAN_VMC
+- mvn clean org.jacoco:jacoco-maven-plugin:prepare-agent install sonar:sonar -Dsonar.scanner.force-deprecated-java-version=true
+  -Dsonar.projectKey=ANASABDELRAHMAN_VMC
 - docker build -t $DOCKER_USERNAME/vmc-monitoring:$TRAVIS_BUILD_ID .
 - docker push $DOCKER_USERNAME/vmc-monitoring:$TRAVIS_BUILD_ID
-
 - cd ../vmc-vehicle
-- mvn clean org.jacoco:jacoco-maven-plugin:prepare-agent install sonar:sonar -Dsonar.scanner.force-deprecated-java-version=true -Dsonar.projectKey=ANASABDELRAHMAN_VMC
+- mvn clean org.jacoco:jacoco-maven-plugin:prepare-agent install sonar:sonar -Dsonar.scanner.force-deprecated-java-version=true
+  -Dsonar.projectKey=ANASABDELRAHMAN_VMC
 - docker build -t $DOCKER_USERNAME/vmc-vehicle:$TRAVIS_BUILD_ID .
 - docker push $DOCKER_USERNAME/vmc-vehicle:$TRAVIS_BUILD_ID
-
 - cd ../vmc-customer
-- mvn clean org.jacoco:jacoco-maven-plugin:prepare-agent install sonar:sonar -Dsonar.scanner.force-deprecated-java-version=true -Dsonar.projectKey=ANASABDELRAHMAN_VMC
+- mvn clean org.jacoco:jacoco-maven-plugin:prepare-agent install sonar:sonar -Dsonar.scanner.force-deprecated-java-version=true
+  -Dsonar.projectKey=ANASABDELRAHMAN_VMC
 - docker build -t $DOCKER_USERNAME/vmc-customer:$TRAVIS_BUILD_ID .
 - docker push $DOCKER_USERNAME/vmc-customer:$TRAVIS_BUILD_ID
-
 - cd ../vmc-status
-- mvn clean org.jacoco:jacoco-maven-plugin:prepare-agent install sonar:sonar -Dsonar.scanner.force-deprecated-java-version=true -Dsonar.projectKey=ANASABDELRAHMAN_VMC
+- mvn clean org.jacoco:jacoco-maven-plugin:prepare-agent install sonar:sonar -Dsonar.scanner.force-deprecated-java-version=true
+  -Dsonar.projectKey=ANASABDELRAHMAN_VMC
 - docker build -t $DOCKER_USERNAME/vmc-status:$TRAVIS_BUILD_ID .
 - docker push $DOCKER_USERNAME/vmc-status:$TRAVIS_BUILD_ID
-
 - cd ../vmc-simulator
-- mvn clean org.jacoco:jacoco-maven-plugin:prepare-agent install sonar:sonar -Dsonar.scanner.force-deprecated-java-version=true -Dsonar.projectKey=ANASABDELRAHMAN_VMC
+- mvn clean org.jacoco:jacoco-maven-plugin:prepare-agent install sonar:sonar -Dsonar.scanner.force-deprecated-java-version=true
+  -Dsonar.projectKey=ANASABDELRAHMAN_VMC
 - docker build -t $DOCKER_USERNAME/vmc-simulator:$TRAVIS_BUILD_ID .
 - docker push $DOCKER_USERNAME/vmc-simulator:$TRAVIS_BUILD_ID
 env:
   global:
-    secure: PEs7B70BCB81k7twNMTUMNXUQGz+KwIHGwrWr44shNoWH9849vj529aL2cG2J4RJHt3OGc6XJEyK7oAE0SeIRSUHoBaUMgREy78gI1F5E4fUTwEC1qskGZrcUu9EIx7U0FnUrfQUpE/lxdWBjPcYlwpETCbzzzjFgmpIW4VRfJBGwo+fZcYmXPrz2weFmrovRC/ZqlJjOHBfhtOx8TOx3STvczbczA6StACZ1qwr8pNz7f0NBnp8H/O8O1pv2mkBLRHbkP12gn9YfGOhXfU4LF0JdKY+HyLUloCXFqqjJyimA7qyyxueDoBdmr2jn7uMgH0FcxYqXCZzZK0scZFWMhuG9pFQlX/PGV8T/N8QGSWNmbGFBtLbiBhxIK6WfRBbt6YIJDGVF9JAItA5Ye/2CMiP5JsBLOP3SsXijudJEpW6ph+9/R+CRS7e0i98w2InkVEL1kU8DRuFzC4FkHp1Nlx1g4AHEJcR7aeswWVBMGr6EnPwTFkTHrj4O04eBBi8gn5LH5+8sFsDzJvFtCpbtKRxYVz38/cLN1hbUrvaEDzopefyrkcYOO8hwaTrDejwMxDd+oGyDedlvxM2qPqRNcmrlpJ2w8pCreBP5J5ZNYcdU8HR6/7lkIk8UfWemvfsRz39XWfLGUdTCXKY9fowB9EBNDOfPjxY8I7hW3NWMkc=
+  - secure: AlFw77J9rKQCZCf3K+RnbpJJvwzovPDhVs3nmvHtNMGUkfZJ/PPha/dJnOYgO0qSpUfekRPPaDweKUt5eZM8RYLUMQWYLlw42fp46fSII2eD66VVmqve9ostU4OHV3j5wRjFQ4tXxivu33t0L2lyPc7njx3M6JijgRs7UGo7o4oBgdjgaEeFZTCwdPcfIFnhO/FdztFQs8WQG1qsSSUumgzzz564+SLMmy9l1VLb+CfyHnwCiMXx9HNZG7LrKRbuLuyn78BUvvZJxBoEydJBWgeoKx8UtEcsRfCLwn4LjYuYjfO9YcZasMrok8oAf5v39huiqC8iTzKi8nG5I5LkqvvFLDRkoEdx06Lhp5wLwxgy0Urp2ctl28KR4dX6YqRunXdLxeZzfMR3w3Mn8kUv1QIhEKuOAIi+KP6dm1x9AHToLpkafu6swsCJTg24vrrNlEGFlR15MDvKhvocGpdCAm+dlBnGBi7F5Q+bxzkeUW02sBYEjU6p/tLz7C6G8T1Tw57WMtTC5zEhlSPhG5KgR3ZFYl7+o/+q1qT1KaYEu6PU9Fy80w9l78MR32Px48u6w0ioadrC/w+RBpR9GdQqxcAFcGfihBAypA11/JLvFcv+9ItZoZmPhw0+9ZU1woU0vvDQFqDS6wMdml2zrhMU4Yo1E1N9mjMfCYqb5KoR48I=
