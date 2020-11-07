@@ -10,7 +10,9 @@ addons:
   sonarcloud:
     organization: "anasabdelrahman-github" # the key of the org you chose at step #3
     token:
-      secure: 803378fb052015dc7d16c00565ca0a517ec7c854 # encrypted value of your token
+      secure: EloI9KcEhD3pc3qHVOtCwEoO0OnQcWS1D4nl0W+PIogS2VlRL7JWVTp/sjAebc7zQGCmlBXoI22nUFOMgfrWOZ161+7hWlYA8A+4HtzULComHfXI2MRxULr3HpLyCfkeXxH5WNpe55gxcDQawIQP5OUv9OsgxQhLkBkcY7in30QS/TztzZEOZbB90Jrc6J0SeMycHU3MLJTnuQRI55X/9Qh2LjyE7jHNbgXfIBGAET2r4RUl4WETaGo4CXk/NYAO3pV6M4PCEc2gJugZv1FK4iqjJFcigl6430LqSABevIsQhPaqnnga8znioXjLv5h5nuvEFXDFSsoPokTUxIrdrmhUngNatxAHAC+K92/qi7t9qcL8QNblzmgrq6/w1ps7x1HtGcgD9c0H4QAc03GwwPk3QT3yEYZeGWN20pSKBp/S0iRwAGLys6b6HOPCHc7JGa8SEdrDYmM660DsMdnVSX2isJrajfOL/mSR0rEBQF2XgFddoQ9Qi+h+eWrIv/BW4ltiUsV193Kpd38jIPZxEHPMeItXaBa6eeKIWV5NkPx8Jah7JgUjjiDBf/mddjR6FHJP5rjfhXEIK98BUub/txiCzY04HGa8pdnyEZu7jeylnicjPjByo0SLvdz5HCZZSJNGVpzr1q9NEIMWlxvYGAxVCnkocqP89hkWKPeO9XI=
+
+  # encrypted value of your token
 
 services:
   - docker
