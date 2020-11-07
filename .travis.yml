@@ -10,7 +10,7 @@ addons:
   sonarcloud:
     organization: "anasabdelrahman-github" # the key of the org you chose at step #3
     token:
-      secure: a3ca87236c0285fd05fd22931e4873f2750931e3 # encrypted value of your token
+      secure: 98365347eef253e84ae3102dffd5e17811ac1053 # encrypted value of your token
 
 services:
   - docker
