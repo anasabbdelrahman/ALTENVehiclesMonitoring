@@ -1,0 +1,5 @@
+com/alten/vmc/VmcCustomerApplicationTests.class
+com/alten/vmc/controller/CustomerControllerTest.class
+com/alten/vmc/controller/CustomerControllerTest$1.class
+com/alten/vmc/service/CustomerServiceTest.class
+com/alten/vmc/error/ErrorHandler.class

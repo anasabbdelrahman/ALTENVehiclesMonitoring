@@ -1,8 +1,9 @@
 com/alten/vmc/VmcVehicleApplication.class
-com/alten/vmc/model/VehicleStatus.class
 com/alten/vmc/repo/VehicleRepository.class
 com/alten/vmc/service/VehicleService.class
+com/alten/vmc/controller/VehicleController.class
 com/alten/vmc/model/Vehicle.class
+com/alten/vmc/model/Status.class
 com/alten/vmc/swagger/SwaggerConfig.class
-com/alten/vmc/error/errorHandler.class
 com/alten/vmc/model/Vehicle$VehicleBuilder.class
+com/alten/vmc/error/ErrorHandler.class

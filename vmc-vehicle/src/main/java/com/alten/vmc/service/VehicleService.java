@@ -1,6 +1,6 @@
 package com.alten.vmc.service;
 
-import com.alten.vmc.model.VehicleStatus;
+import com.alten.vmc.model.Status;
 import com.alten.vmc.model.Vehicle;
 import com.alten.vmc.repo.VehicleRepository;
 import org.apache.commons.lang.StringUtils;
@@ -64,7 +64,7 @@ public class VehicleService {
         }
 
         return Optional.ofNullable(vehicleRepository.findById(id).map(vehicle -> {
-            vehicle.setStatus(VehicleStatus.CONNECTED.getStatusCode());
+            vehicle.setStatus(Status.CONNECTED.getStatusCode());
             vehicle.setRecentUpdatedDateTime(LocalDateTime.now());
             vehicleRepository.save(vehicle);
             return vehicle;

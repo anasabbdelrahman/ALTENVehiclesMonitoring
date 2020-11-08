@@ -1,8 +1,8 @@
-/Users/anasabdelrahman/Personal/ALTENChallenge/ALTENVehiclesMonitoring/vmc-vehicle/src/main/java/com/alten/vmc/model/VehicleStatus.java
+/Users/anasabdelrahman/Personal/ALTENChallenge/ALTENVehiclesMonitoring/vmc-vehicle/src/main/java/com/alten/vmc/error/ErrorHandler.java
 /Users/anasabdelrahman/Personal/ALTENChallenge/ALTENVehiclesMonitoring/vmc-vehicle/src/main/java/com/alten/vmc/controller/VehicleController.java
 /Users/anasabdelrahman/Personal/ALTENChallenge/ALTENVehiclesMonitoring/vmc-vehicle/src/main/java/com/alten/vmc/repo/VehicleRepository.java
 /Users/anasabdelrahman/Personal/ALTENChallenge/ALTENVehiclesMonitoring/vmc-vehicle/src/main/java/com/alten/vmc/service/VehicleService.java
-/Users/anasabdelrahman/Personal/ALTENChallenge/ALTENVehiclesMonitoring/vmc-vehicle/src/main/java/com/alten/vmc/error/errorHandler.java
 /Users/anasabdelrahman/Personal/ALTENChallenge/ALTENVehiclesMonitoring/vmc-vehicle/src/main/java/com/alten/vmc/VmcVehicleApplication.java
+/Users/anasabdelrahman/Personal/ALTENChallenge/ALTENVehiclesMonitoring/vmc-vehicle/src/main/java/com/alten/vmc/model/Status.java
 /Users/anasabdelrahman/Personal/ALTENChallenge/ALTENVehiclesMonitoring/vmc-vehicle/src/main/java/com/alten/vmc/model/Vehicle.java
 /Users/anasabdelrahman/Personal/ALTENChallenge/ALTENVehiclesMonitoring/vmc-vehicle/src/main/java/com/alten/vmc/swagger/SwaggerConfig.java

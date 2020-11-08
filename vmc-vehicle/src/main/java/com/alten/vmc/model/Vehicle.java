@@ -21,4 +21,15 @@ public class Vehicle {
     private String registrationNumber;
     private String status;
     private LocalDateTime recentUpdatedDateTime;
+
+
+    public Vehicle(String id,String name, String model, String plateNumber, String registrationNumber, String status){
+        this.id = id;
+        this.name = name;
+        this.model = model;
+        this.plateNumber = plateNumber;
+        this.registrationNumber = registrationNumber;
+        this.status = status;
+
+    }
 }

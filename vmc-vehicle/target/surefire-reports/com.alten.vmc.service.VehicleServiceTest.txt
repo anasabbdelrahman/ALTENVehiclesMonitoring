@@ -1,0 +1,16 @@
+-------------------------------------------------------------------------------
+Test set: com.alten.vmc.service.VehicleServiceTest
+-------------------------------------------------------------------------------
+Tests run: 12, Failures: 0, Errors: 3, Skipped: 0, Time elapsed: 3.088 s <<< FAILURE! - in com.alten.vmc.service.VehicleServiceTest
+testFindByPlateNumberWithExistingValue  Time elapsed: 0.26 s  <<< ERROR!
+java.lang.NullPointerException
+	at com.alten.vmc.service.VehicleServiceTest.testFindByPlateNumberWithExistingValue(VehicleServiceTest.java:64)
+
+testFindByIdWithExitingValue  Time elapsed: 0.216 s  <<< ERROR!
+java.lang.NullPointerException
+	at com.alten.vmc.service.VehicleServiceTest.testFindByIdWithExitingValue(VehicleServiceTest.java:38)
+
+testFindByRegistrationNumberWithExistingValue  Time elapsed: 0.213 s  <<< ERROR!
+java.lang.NullPointerException
+	at com.alten.vmc.service.VehicleServiceTest.testFindByRegistrationNumberWithExistingValue(VehicleServiceTest.java:77)
+

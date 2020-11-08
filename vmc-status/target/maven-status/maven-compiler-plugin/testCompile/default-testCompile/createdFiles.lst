@@ -1,0 +1,5 @@
+com/alten/vmc/controller/StatusControllerTest$1.class
+com/alten/vmc/VmcStatusApplicationTests.class
+com/alten/vmc/service/StatusServiceTest.class
+com/alten/vmc/error/ErrorHandlerTest.class
+com/alten/vmc/controller/StatusControllerTest.class

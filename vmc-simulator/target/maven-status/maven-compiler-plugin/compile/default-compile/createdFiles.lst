@@ -1,1 +1,6 @@
+com/alten/vmc/client/VehicleClient.class
+com/alten/vmc/Vehicle$VehicleBuilder.class
 com/alten/vmc/VmcSimulatorApplication.class
+com/alten/vmc/scheduler/VehicleScheduler.class
+com/alten/vmc/Status.class
+com/alten/vmc/Vehicle.class
