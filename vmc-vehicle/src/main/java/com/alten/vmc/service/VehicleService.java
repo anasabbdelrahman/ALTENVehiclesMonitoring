@@ -47,6 +47,15 @@ public class VehicleService {
         return vehicleRepository.findByPlateNumber(plateNumber);
     }
 
+    public Vehicle findByStatus(String status){
+
+        if (StringUtils.isEmpty(status)){
+            throw new IllegalArgumentException("There is a missing: status");
+        }
+
+        return vehicleRepository.findByStatus(status);
+    }
+
     public List<Vehicle> findByName(String name){
 
         if (StringUtils.isEmpty(name)){

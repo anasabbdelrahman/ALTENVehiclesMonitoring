@@ -1,6 +1,6 @@
 package com.alten.vmc.service;
 
-import com.alten.vmc.Customer;
+import com.alten.vmc.model.Customer;
 import org.junit.Assert;
 import org.junit.Test;
 import org.junit.runner.RunWith;

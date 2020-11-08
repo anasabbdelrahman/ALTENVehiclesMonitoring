@@ -1,6 +1,6 @@
 package com.alten.vmc.controller;
 
-import com.alten.vmc.Customer;
+import com.alten.vmc.model.Customer;
 import com.alten.vmc.service.CustomerService;
 import com.netflix.hystrix.contrib.javanica.annotation.HystrixCommand;
 import com.netflix.hystrix.contrib.javanica.annotation.HystrixProperty;

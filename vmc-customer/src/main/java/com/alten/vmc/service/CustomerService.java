@@ -1,6 +1,6 @@
 package com.alten.vmc.service;
 
-import com.alten.vmc.Customer;
+import com.alten.vmc.model.Customer;
 import com.alten.vmc.repository.CustomerRepository;
 import org.apache.commons.lang.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;

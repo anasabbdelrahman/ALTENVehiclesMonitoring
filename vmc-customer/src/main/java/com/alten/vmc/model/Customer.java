@@ -1,4 +1,4 @@
-package com.alten.vmc;
+package com.alten.vmc.model;
 
 
 import lombok.*;

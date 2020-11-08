@@ -40,6 +40,11 @@ public class VehicleController {
 
     }
 
+    @GetMapping("/vehicle/status/{status}")
+    public Vehicle getVehicleByStatus(@PathVariable("status") String status){
+        return vehicleService.findByStatus(status);
+    }
+
     public void setVehicleService(VehicleService vehicleService) {
         this.vehicleService = vehicleService;
     }

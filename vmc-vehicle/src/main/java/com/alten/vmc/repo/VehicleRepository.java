@@ -9,4 +9,6 @@ public interface VehicleRepository extends MongoRepository<Vehicle, String> {
     public Vehicle findByRegistrationNumber(String registrationNumber);
     public List<Vehicle> findByName(String name);
     public Vehicle findByPlateNumber(String plateNumber);
+    public Vehicle findByStatus(String status);
+
 }
