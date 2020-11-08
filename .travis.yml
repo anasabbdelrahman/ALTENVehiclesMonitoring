@@ -20,41 +20,41 @@ script:
   -Dsonar.projectKey=anasabbdelrahman_ALTENVehiclesMonitoring
 - docker build -t $DOCKER_USERNAME/vmc-config:$TRAVIS_BUILD_ID .
 - docker push $DOCKER_USERNAME/vmc-config:$TRAVIS_BUILD_ID
-- cd ../vmc-registry
-- mvn clean org.jacoco:jacoco-maven-plugin:prepare-agent install sonar:sonar -Dsonar.scanner.force-deprecated-java-version=true
-  -Dsonar.projectKey=anasabbdelrahman_ALTENVehiclesMonitoring
-- docker build -t $DOCKER_USERNAME/vmc-registry:$TRAVIS_BUILD_ID .
-- docker push $DOCKER_USERNAME/vmc-registry:$TRAVIS_BUILD_ID
-- cd ../vmc-gateway
-- mvn clean org.jacoco:jacoco-maven-plugin:prepare-agent install sonar:sonar -Dsonar.scanner.force-deprecated-java-version=true
-  -Dsonar.projectKey=anasabbdelrahman_ALTENVehiclesMonitoring
-- docker build -t $DOCKER_USERNAME/vmc-gateway:$TRAVIS_BUILD_ID .
-- docker push $DOCKER_USERNAME/vmc-gateway:$TRAVIS_BUILD_ID
-- cd ../vmc-monitoring
-- mvn clean org.jacoco:jacoco-maven-plugin:prepare-agent install sonar:sonar -Dsonar.scanner.force-deprecated-java-version=true
-  -Dsonar.projectKey=anasabbdelrahman_ALTENVehiclesMonitoring
-- docker build -t $DOCKER_USERNAME/vmc-monitoring:$TRAVIS_BUILD_ID .
-- docker push $DOCKER_USERNAME/vmc-monitoring:$TRAVIS_BUILD_ID
-- cd ../vmc-vehicle
-- mvn clean org.jacoco:jacoco-maven-plugin:prepare-agent install sonar:sonar -Dsonar.scanner.force-deprecated-java-version=true
-  -Dsonar.projectKey=anasabbdelrahman_ALTENVehiclesMonitoring
-- docker build -t $DOCKER_USERNAME/vmc-vehicle:$TRAVIS_BUILD_ID .
-- docker push $DOCKER_USERNAME/vmc-vehicle:$TRAVIS_BUILD_ID
-- cd ../vmc-customer
-- mvn clean org.jacoco:jacoco-maven-plugin:prepare-agent install sonar:sonar -Dsonar.scanner.force-deprecated-java-version=true
-  -Dsonar.projectKey=anasabbdelrahman_ALTENVehiclesMonitoring
-- docker build -t $DOCKER_USERNAME/vmc-customer:$TRAVIS_BUILD_ID .
-- docker push $DOCKER_USERNAME/vmc-customer:$TRAVIS_BUILD_ID
-- cd ../vmc-status
-- mvn clean org.jacoco:jacoco-maven-plugin:prepare-agent install sonar:sonar -Dsonar.scanner.force-deprecated-java-version=true
-  -Dsonar.projectKey=anasabbdelrahman_ALTENVehiclesMonitoring
-- docker build -t $DOCKER_USERNAME/vmc-status:$TRAVIS_BUILD_ID .
-- docker push $DOCKER_USERNAME/vmc-status:$TRAVIS_BUILD_ID
-- cd ../vmc-simulator
-- mvn clean org.jacoco:jacoco-maven-plugin:prepare-agent install sonar:sonar -Dsonar.scanner.force-deprecated-java-version=true
-  -Dsonar.projectKey=anasabbdelrahman_ALTENVehiclesMonitoring
-- docker build -t $DOCKER_USERNAME/vmc-simulator:$TRAVIS_BUILD_ID .
-- docker push $DOCKER_USERNAME/vmc-simulator:$TRAVIS_BUILD_ID
+#- cd ../vmc-registry
+#- mvn clean org.jacoco:jacoco-maven-plugin:prepare-agent install sonar:sonar -Dsonar.scanner.force-deprecated-java-version=true
+#  -Dsonar.projectKey=anasabbdelrahman_ALTENVehiclesMonitoring
+#- docker build -t $DOCKER_USERNAME/vmc-registry:$TRAVIS_BUILD_ID .
+#- docker push $DOCKER_USERNAME/vmc-registry:$TRAVIS_BUILD_ID
+#- cd ../vmc-gateway
+#- mvn clean org.jacoco:jacoco-maven-plugin:prepare-agent install sonar:sonar -Dsonar.scanner.force-deprecated-java-version=true
+#  -Dsonar.projectKey=anasabbdelrahman_ALTENVehiclesMonitoring
+#- docker build -t $DOCKER_USERNAME/vmc-gateway:$TRAVIS_BUILD_ID .
+#- docker push $DOCKER_USERNAME/vmc-gateway:$TRAVIS_BUILD_ID
+#- cd ../vmc-monitoring
+#- mvn clean org.jacoco:jacoco-maven-plugin:prepare-agent install sonar:sonar -Dsonar.scanner.force-deprecated-java-version=true
+#  -Dsonar.projectKey=anasabbdelrahman_ALTENVehiclesMonitoring
+#- docker build -t $DOCKER_USERNAME/vmc-monitoring:$TRAVIS_BUILD_ID .
+#- docker push $DOCKER_USERNAME/vmc-monitoring:$TRAVIS_BUILD_ID
+#- cd ../vmc-vehicle
+#- mvn clean org.jacoco:jacoco-maven-plugin:prepare-agent install sonar:sonar -Dsonar.scanner.force-deprecated-java-version=true
+#  -Dsonar.projectKey=anasabbdelrahman_ALTENVehiclesMonitoring
+#- docker build -t $DOCKER_USERNAME/vmc-vehicle:$TRAVIS_BUILD_ID .
+#- docker push $DOCKER_USERNAME/vmc-vehicle:$TRAVIS_BUILD_ID
+#- cd ../vmc-customer
+#- mvn clean org.jacoco:jacoco-maven-plugin:prepare-agent install sonar:sonar -Dsonar.scanner.force-deprecated-java-version=true
+#  -Dsonar.projectKey=anasabbdelrahman_ALTENVehiclesMonitoring
+#- docker build -t $DOCKER_USERNAME/vmc-customer:$TRAVIS_BUILD_ID .
+#- docker push $DOCKER_USERNAME/vmc-customer:$TRAVIS_BUILD_ID
+#- cd ../vmc-status
+#- mvn clean org.jacoco:jacoco-maven-plugin:prepare-agent install sonar:sonar -Dsonar.scanner.force-deprecated-java-version=true
+#  -Dsonar.projectKey=anasabbdelrahman_ALTENVehiclesMonitoring
+#- docker build -t $DOCKER_USERNAME/vmc-status:$TRAVIS_BUILD_ID .
+#- docker push $DOCKER_USERNAME/vmc-status:$TRAVIS_BUILD_ID
+#- cd ../vmc-simulator
+#- mvn clean org.jacoco:jacoco-maven-plugin:prepare-agent install sonar:sonar -Dsonar.scanner.force-deprecated-java-version=true
+#  -Dsonar.projectKey=anasabbdelrahman_ALTENVehiclesMonitoring
+#- docker build -t $DOCKER_USERNAME/vmc-simulator:$TRAVIS_BUILD_ID .
+#- docker push $DOCKER_USERNAME/vmc-simulator:$TRAVIS_BUILD_ID
 env:
   global:
     secure: nZoEMymmVls6td2qPWynBynbfz+zYNAzzoE9/rPSzOqX+FTyS/Vbx/uByQaxSTrTKTf8RJl+Qkc2brCwgfttTJgc/xXgZgsk0lDdyFpgIk7kSpXl1ZVsabnYvI6IlAKC69utj0Kmkst4ORGsYXOR712G/Bw7CNY32kahh0BIZiNOfNTTmIQMdA2DKr3D3UxUbyEwozkTbu69nuT3EV3WB6OZjULyeLsGbWKbVZY05EDsK9kbfl6CTO6kZ5/fLHmDklYS+Up/dpyNouOcHrV0pBlujzunEMZKl0tnH/BFin7bLCK5LIxAnvzq+9pTIWXiSPV4fi3/A+0Q6AuCEtZ8TG3cnuEcl6rM6/362g+pUoHkNyoZdBbpPcti7B87/q/hWKGU6YowAotZu6j54d1nvu1m3XbA8dyS42Nj8QoDf0/MhnoLdNTjoxELa0VDHaWFR4P8Gx9Pf9trsFnZUfB4BMDvJO0cGiYgE342Ng1WSw+hLyDD/ZV53UkFPVSshgWRf2cBqN8qTW3Byu1d5XIsoUhBDKg9oxBPxSowNp+SFp/4GgBnlrRcb/W4pT93BuOp2xA6pprK9R0fZwLrOJnTbZmCStqFEBVYfrW0EEByDwEJn0x9uMztwf8WhlKkBUY6I8EKc82IyvZLWE7IRjads9iUSYIqObCpY34k6aMaUAM=
