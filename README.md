@@ -1,14 +1,3 @@
-[![Build Status](https://travis-ci.com/anasabbdelrahman/ALTENVehiclesMonitoring.svg?branch=main)](https://travis-ci.com/anasabbdelrahman/ALTENVehiclesMonitoring)
-
-[![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=anasabbdelrahman_ALTENVehiclesMonitoring&metric=alert_status)](https://sonarcloud.io/dashboard?id=anasabbdelrahman_ALTENVehiclesMonitoring)
-
-[![Bugs](https://sonarcloud.io/api/project_badges/measure?project=anasabbdelrahman_ALTENVehiclesMonitoring&metric=bugs)](https://sonarcloud.io/dashboard?id=anasabbdelrahman_ALTENVehiclesMonitoring)
-
-[![Duplicated Lines (%)](https://sonarcloud.io/api/project_badges/measure?project=anasabbdelrahman_ALTENVehiclesMonitoring&metric=duplicated_lines_density)](https://sonarcloud.io/dashboard?id=anasabbdelrahman_ALTENVehiclesMonitoring)
-
-[![Reliability Rating](https://sonarcloud.io/api/project_badges/measure?project=anasabbdelrahman_ALTENVehiclesMonitoring&metric=reliability_rating)](https://sonarcloud.io/dashboard?id=anasabbdelrahman_ALTENVehiclesMonitoring)
-
-
 # **Vehicle Management Challenge**
 
 **Vehicle management Challenge** refers to an application that helps business enterprises coordinate and manage work vehicles in a central information system for the smooth functioning of the entire organization.
@@ -105,13 +94,45 @@ Below you have all customers from the system; their addresses and the vehicles t
 | YS2R4X20005387055 | STU901   |
 
 
-# **Architectural sketch to solution**
+# **Solution Architecture**
 
-# **Analysis and technologies**
+<p align="center">
+<img src="images/vmc_architecture.png" width="800">
+</p>
 
-# **Cloud Solution**
+We aim to build the VMC using **Microservice Architecture** which brings a great flexibility and added resilience to our code.
 
-# **Deployment steps**
+So as depected in the picture, we have three main services (vehicle, customer and Status) which handle the business logic of the application.
+We have other services which is part of the microservice architecture pattern:
+- Service Registry
+- Config Server
+- API Gateway
+
+> Note: it's also important to realize what a microservice is not:
+- A microservice is not a service that has a small number of lines of code or does "micro" tasks. This misconception comes from the name "microservice". The goal of the microservice architecture is not to have as many small services as possible. Services could be complex and substantial as long as they meet the above three principles.
+- A microservice is not a service that is built with new technology all the time. Even though the microservice architecture allows teams to test new technology more easily, it is not the primary goal of microservice architecture. It is totally fine to build new services with the exact same technology stack, as long as the team benefits from decoupled services.
+- A microservice is not a service that has to be built from scratch. When you have a well-architected monolithic app already, avoid getting into the habit to build every new service from scratch. There might be opportunities to extract the logic from the monolithic service directly. Again, the above three principles should still hold.
+
+# **Technology**
+
+<p align="center">
+<img src="images/vmc_technology.png" width="800">
+</p>
+
+We used **Spring Cloud** project which builds on top of Spring Boot, it provides a set of features to quickly build microservices. It’s very smart to know how to get them working together, can quickly setup services, with minimal configurations.
+
+It contains things like service registration and discovery, circuit breakers, proxies, logging and log tracking, monitoring, authentication, etc.
+
+# **DevOps (CI/CD)**
+
+<p align="center">
+<img src="images/vmc_automation.png" width="800">
+</p>
+
+Testing is an important aspect of creating software. To ensure that unit tests are run against every build of a project, many engineering organizations have adopted the practice of continuous integration (CI), which involves using tools, such as Jenkins or Travis CI, to ensure that all new code is automatically and consistently tested for errors. 
+
+Continuous delivery (CD) goes one step further by ensuring you can deploy every build into a production-like environment and then pass integration tests in that environment.
+
 
 # **API Documentation**
 
@@ -123,3 +144,19 @@ Below you have all customers from the system; their addresses and the vehicles t
 
 - **Status API:** [http://localhost:8052/swagger-ui.html](http://localhost:8052/swagger-ui.html 'http://localhost:8052/swagger-ui.html')
   ![Alt text](images/vmc_status_api.png?raw=true 'status api')
+
+
+# **Code Quality Analysis**
+
+We have used **Travis CI** with **SonarCloud** to produce quality result of the whole application as depicted below in the provided badges.
+
+[![Build Status](https://travis-ci.com/anasabbdelrahman/ALTENVehiclesMonitoring.svg?branch=main)](https://travis-ci.com/anasabbdelrahman/ALTENVehiclesMonitoring)
+
+[![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=anasabbdelrahman_ALTENVehiclesMonitoring&metric=alert_status)](https://sonarcloud.io/dashboard?id=anasabbdelrahman_ALTENVehiclesMonitoring)
+
+[![Bugs](https://sonarcloud.io/api/project_badges/measure?project=anasabbdelrahman_ALTENVehiclesMonitoring&metric=bugs)](https://sonarcloud.io/dashboard?id=anasabbdelrahman_ALTENVehiclesMonitoring)
+
+[![Duplicated Lines (%)](https://sonarcloud.io/api/project_badges/measure?project=anasabbdelrahman_ALTENVehiclesMonitoring&metric=duplicated_lines_density)](https://sonarcloud.io/dashboard?id=anasabbdelrahman_ALTENVehiclesMonitoring)
+
+[![Reliability Rating](https://sonarcloud.io/api/project_badges/measure?project=anasabbdelrahman_ALTENVehiclesMonitoring&metric=reliability_rating)](https://sonarcloud.io/dashboard?id=anasabbdelrahman_ALTENVehiclesMonitoring)
+

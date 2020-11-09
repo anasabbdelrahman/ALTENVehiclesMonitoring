@@ -1,4 +1,4 @@
 -------------------------------------------------------------------------------
 Test set: com.alten.vmc.controller.StatusControllerTest
 -------------------------------------------------------------------------------
-Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 2.066 s - in com.alten.vmc.controller.StatusControllerTest
+Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 2.553 s - in com.alten.vmc.controller.StatusControllerTest
