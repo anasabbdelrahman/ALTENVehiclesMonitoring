@@ -18,7 +18,7 @@ It might include handling of vehicle maintenance, financing, tracking, replaceme
 
 
 <p align="center">
-<img src="imags/vmc_main.png" width="800">
+<img src="images/vmc_main.png" width="800">
 </p>
 
 
@@ -116,10 +116,10 @@ Below you have all customers from the system; their addresses and the vehicles t
 # **API Documentation**
 
 - **Customer API:** [http://localhost:8051/swagger-ui.html](http://localhost:8051/swagger-ui.html 'http://localhost:8051/swagger-ui.html')
-  ![Alt text](imags/vmc_customer_api.png?raw=true 'customer api')
+  ![Alt text](images/vmc_customer_api.png?raw=true 'customer api')
   
 - **Vehicle API:** [http://localhost:8050/swagger-ui.html](http://localhost:8050/swagger-ui.html 'http://localhost:8050/swagger-ui.html')
-  ![Alt text](imags/vmc_vehicle_api.png?raw=true 'vehicle api')
+  ![Alt text](images/vmc_vehicle_api.png?raw=true 'vehicle api')
 
 - **Status API:** [http://localhost:8052/swagger-ui.html](http://localhost:8052/swagger-ui.html 'http://localhost:8052/swagger-ui.html')
-  ![Alt text](imags/vmc_status_api.png?raw=true 'status api')
+  ![Alt text](images/vmc_status_api.png?raw=true 'status api')
