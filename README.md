@@ -145,10 +145,16 @@ Continuous delivery (CD) goes one step further by ensuring you can deploy every 
 - **Status API:** [http://localhost:8052/swagger-ui.html](http://localhost:8052/swagger-ui.html 'http://localhost:8052/swagger-ui.html')
   ![Alt text](images/vmc_status_api.png?raw=true 'status api')
 
+# **User Interface (UI) Dashboard**
+
+I used React.js framework as it is the most popular front-end framework for Web applications. The component-based approach, well-defined lifecycle, and use of just plain JavaScript that is make React easy to learn, build a professional web application, and support it. 
+    <p align="center">
+    <img src="images/vmcUI.png" width="800">
+    </p>
 
 # **Code Quality Analysis**
 
-We have used **Travis CI** with **SonarCloud** to produce quality result of the whole application as depicted below in the provided badges.
+We have used **Travis CI** with **SonarCloud** to produce quality result of the whole application as depicted below in the provided badges. 
 
 [![Build Status](https://travis-ci.com/anasabbdelrahman/ALTENVehiclesMonitoring.svg?branch=main)](https://travis-ci.com/anasabbdelrahman/ALTENVehiclesMonitoring)
 
